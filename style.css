@@ -9,7 +9,7 @@ body {
     background-color: #fafafa;
     max-width: 100%;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 0;
     text-align: center;
 }
 
@@ -65,14 +65,16 @@ button:hover {
 @media screen and (max-width: 600px) {
   .navbar li {
     display: block;
-    margin: 10px 0;
+    margin: 0px 0;
   }
 }
 
 
 .container {
-  width: 100%;
-  overflow: hidden;
+
+  display:inline-block;
+margin:0;
+padding:0;
 }
 
 .text {
@@ -115,5 +117,24 @@ color:red;
 }
 #dose-text{
 font-size:7vw;
+text-align:left;
+}
+.text-dose{
+width:50%;
+padding:0;
+margin:0;
+font-size:10vw;
+font-weight:bold;
+color:white;
+background-color:black;
+text-align:right;
+}
+.text-tracker{
+width:50%;
+padding:0;
+margin:0;
+font-size:8vw;
+color:grey;
+background-color:black;
 text-align:left;
 }
