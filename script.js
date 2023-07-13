@@ -76,3 +76,10 @@ window.onload = function() {
         document.getElementById("last-dose-amount").innerHTML = lastDose.amount;
     }
 }
+
+
+const container = document.querySelector('.container');
+const text = document.querySelector('.text');
+
+// Adjust container width based on text content
+container.style.width = text.offsetWidth + 'px';
