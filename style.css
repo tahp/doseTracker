@@ -90,3 +90,30 @@ button:hover {
     transform: scale(0.5);
   }
 }
+#amountText {
+font-size:8vw;
+font-spacing:2em;
+}
+#time-since-last-dose{
+color: grey;
+} 
+#last-dose-amount{
+color:green;
+font-size:20vw;
+}
+#last-dose-time{
+text-align:right;
+font-size:7vw;
+color:blue;
+}
+#total-dose-amount{
+font-size:7vw;
+}
+#total-doses{
+font-size:4vw;
+color:red;
+}
+#dose-text{
+font-size:7vw;
+text-align:left;
+}
