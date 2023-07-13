@@ -14,29 +14,34 @@ font-size: 40px;
 </head>
 <body >
 
-<div id="navbar">
- <ul><li>
-    <a href="page1.html">Page 1</a></li>
-  <li>  <a href="page2.html">Page 2</a></li>
-    <a href="page3.html">Page 3</a>
-  </ul></div>
+<nav class="navbar">
+  <div class="navbar-toggle">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </div>
+  <ul class="navbar-links">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Services</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</nav>
   <div id="content">
     <!-- Content will be loaded here -->
   </div>
     <div id="dose-tracker">
 
 <div class="container">
-  <span class="text">Dose</span>
+  <span class="text">Dose Tracker</span>
 </div>
 
-        <p><h1>Dose Tracker</h1><h2>
-        Current Time: <span id="current-time"></span></h2></p><img src="img/bottle.png">
-        <p>Total Doses: <span id="total-doses"></span></p>
+  
+        
 
-        <p>your last dose was <span id="time-since-last-dose"></span> ago at <span id="last-dose-time"></span></p>
-        <p>Last Dose Amount: <span id="last-dose-amount"></span></p>
-        <p>Total Dose Amount: <span id="total-dose-amount"></span></p>
-        <label for="dose-amount">you just did another </label>
+        <p>You took <span id="last-dose-amount"></span> droppers <span id="time-since-last-dose"></span> ago at <span id="last-dose-time"></p>
+ <p>That adds up to      <span id="total-dose-amount"></span> droppers total, spreaded over <span id="total-doses"></span> doses overall</p>
+        <div id="dose-text">Did you just dose again?</div><p>
         
 
  <style>
@@ -50,7 +55,7 @@ font-size: 40px;
     flex: 1;
   }
 </style>
-
+<div id="amountText">How many droppers?</div><p>
 <div id="dose-amount">
   <label>
     <input type="radio" name="dose" value=".5"> .5
@@ -70,15 +75,16 @@ font-size: 40px;
   <label>
     <input type="radio" name="dose" value="5"> 5
   </label>
-</div>dropper/s
-
+</div>
+<p>
 <script src="img/20230528182111.png" onclick"submitDose()"></script>
         <button onclick="submitDose()" id="confirm">confirm</button>
         <button onclick="resetDoses()">Reset</button>
     </div>
 
     <footer>
-        <!-- Add footer content here -->
+        <!-- Add footer content here -->      <p><h2>
+        Current Time: <span id="current-time"></span></h2></p>
     </footer>
 
     <script>
