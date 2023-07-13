@@ -7,28 +7,22 @@ body {
 
 #dose-tracker {
     background-color: #fafafa;
-    max-width: 200px;
+    max-width: 100%;
     margin: 0 auto;
     padding: 2rem;
     text-align: center;
 }
 
-p {
-font-size:xx-large;
-}
-h1 {
-font-size:5rem;
-}
-h2 {
-    margin-top: 0;
+#h1 {
+      display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex:1;
 }
 
-label {
-    display: block;
-    margin-top: 1rem;
-}
 
-button {
+
+button{
     background-color: #4CAF50;
     border: none;
     color: white;
@@ -36,11 +30,63 @@ button {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 1.5rem;
+    font-size: 70px;
     margin: 1rem 0.5rem;
     cursor: pointer;
+width:100%;
 }
 
 button:hover {
     background-color: #3e8e41;
+}
+/* Default styles for the navigation bar */
+#navbar {
+  background-color: #333;
+  color: #fff;
+}
+
+#navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#navbar li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+#navbar a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Media query for responsive styles */
+@media screen and (max-width: 600px) {
+  .navbar li {
+    display: block;
+    margin: 10px 0;
+  }
+}
+
+
+.container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.text {
+  white-space: nowrap;
+  font-size: 15vw;
+  display: inline-block;
+  animation: scaleText linear infinite;
+}
+
+@keyframes scaleText {
+  0% {
+    transform: scale(31);
+  }
+  100% {
+    transform: scale(0.5);
+  }
 }
