@@ -1,6 +1,6 @@
 function submitDose() {
     
-    let doseAmount = document.querySelector('input[name="dose-amount"]:checked').value;
+    let doseAmount = document.querySelector('input[name="dose"]:checked').value;
     let doseTime = new Date();
 
     // Store the submitted dose information in localStorage
