@@ -1,6 +1,5 @@
 function submitDose() {
-    
-    let doseAmount = document.querySelector('input[name="dose"]:checked').value;
+    let doseAmount = parseFloat(document.querySelector('input[name="dose"]:checked').value);
     let doseTime = new Date();
 
     // Store the submitted dose information in localStorage
@@ -11,6 +10,10 @@ function submitDose() {
     // Update the last dose time and amount
     document.getElementById("last-dose-time").innerHTML = doseTime.toLocaleTimeString();
     document.getElementById("last-dose-amount").innerHTML = doseAmount;
+
+    // Update the total dose amount
+    let totalDoseAmount = doses.reduce((total, dose) => total + parseFloat(dose.amount), 0);
+    document.getElementById("total-dose-amount").innerHTML = totalDoseAmount;
 }
 
 function resetDoses() {
@@ -32,10 +35,7 @@ setInterval(function() {
     let doses = JSON.parse(localStorage.getItem("doses")) || [];
     document.getElementById("total-doses").innerHTML = doses.length;
 
-    let totalDoseAmount = 0;
-    for (let i = 0; i < doses.length; i++) {
-        totalDoseAmount += parseInt(doses[i].amount);
-    }
+    let totalDoseAmount = doses.reduce((total, dose) => total + parseFloat(dose.amount), 0);
     document.getElementById("total-dose-amount").innerHTML = totalDoseAmount;
 
     if (doses.length > 0) {
@@ -77,7 +77,6 @@ window.onload = function() {
         document.getElementById("last-dose-amount").innerHTML = lastDose.amount;
     }
 }
-
 
 const container = document.querySelector('.container');
 const text = document.querySelector('.text');
