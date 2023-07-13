@@ -1,0 +1,46 @@
+body {
+    font-family: "Futura", "Arial";
+}
+
+
+
+
+#dose-tracker {
+    background-color: #fafafa;
+    max-width: 200px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+p {
+font-size:xx-large;
+}
+h1 {
+font-size:5rem;
+}
+h2 {
+    margin-top: 0;
+}
+
+label {
+    display: block;
+    margin-top: 1rem;
+}
+
+button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 1rem 2rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.5rem;
+    margin: 1rem 0.5rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #3e8e41;
+}
