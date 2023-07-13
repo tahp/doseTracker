@@ -1,5 +1,73 @@
+<!DOCTYPE html>
 <html>
 <head>
+    <title>Response Webpage</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+    <style>
+        body {
+            font-family: "Futura";
+font-size: 40px;
+        }
+    </style>
 
 </head>
-<body>
+<body >
+
+<div id=test>
+  <nav>
+    <a href="page1.html">Page 1</a>
+    <a href="page2.html">Page 2</a>
+    <a href="page3.html">Page 3</a>
+  </nav></div>
+  <div id="content">
+    <!-- Content will be loaded here -->
+  </div>
+    <div id="dose-tracker">
+        <p><h1>Dose Tracker</h1><h2>
+        Current Time: <span id="current-time"></span></h2></p><img src="img/bottle.png">
+        <p>Total Doses: <span id="total-doses"></span></p>
+
+        <p>your last dose was <span id="time-since-last-dose"></span> ago at <span id="last-dose-time"></span></p>
+        <p>Last Dose Amount: <span id="last-dose-amount"></span></p>
+        <p>Total Dose Amount: <span id="total-dose-amount"></span></p>
+        <label for="dose-amount">you just did another </label>
+        
+<select id="dose-amount" style="font-size: 30px;">
+    <option value="0.5">half</option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+</select>
+ dropper/s
+
+<script src="img/20230528182111.png" onclick"submitDose()"></script>
+        <button onclick="submitDose()" style="font-size: 70px;">confirm</button>
+        <button onclick="resetDoses()">Reset</button>
+    </div>
+
+    <footer>
+        <!-- Add footer content here -->
+    </footer>
+
+    <script>
+        document.getElementById("last-dose-time").innerHTML = new Date().toLocaleTimeString();
+    </script>
+
+  <!-- Include jQuery library -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- Include your script -->
+  <script>
+    $(document).ready(function() {
+      $('nav a').on('click', function(event) {
+        event.preventDefault();
+        var href = $(this).attr('href');
+        $('#content').load(href + ' #content');
+      });
+    });
+  </script>
+</body>
+</html>
