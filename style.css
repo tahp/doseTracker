@@ -1,0 +1,159 @@
+body {
+    font-family: "Futura", "Arial";
+}
+
+
+
+
+#dose-tracker {
+    background-color: #fafafa;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+}
+
+#h1 {
+      display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex:1;
+}
+
+
+
+button{
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 70px;
+    margin:-10;
+    padding:5px;
+    cursor: pointer;
+width:100%;
+}
+
+button:hover {
+    background-color: #3e8e41;
+}
+/* Default styles for the navigation bar */
+#navbar {
+  background-color: #333;
+  color: #fff;
+}
+
+#navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#navbar li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+#navbar a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Media query for responsive styles */
+@media screen and (max-width: 600px) {
+  .navbar li {
+    display: block;
+    margin: 0px 0;
+  }
+}
+
+
+.container {
+position:absolute;
+top:0;
+left:0;
+margin:0;
+padding:0;
+}
+
+.text {
+  white-space: nowrap;
+  font-size: 15vw;
+  display: inline-block;
+  animation: scaleText linear infinite;
+}
+
+@keyframes scaleText {
+  0% {
+    transform: scale(31);
+  }
+  100% {
+    transform: scale(0.5);
+  }
+}
+#amountText::first-letter {
+font-size:10vw;
+font-weight:bold;
+}
+#amountText{
+font-size:8vw;
+font-spacing:2em;
+}
+
+#time-since-last-dose{
+color: grey;
+} 
+#last-dose-amount{
+color:green;
+font-size:20vw;
+font-family:"Impact";
+font-weight:bold;
+}
+#last-dose-time{
+text-align:right;
+font-size:7vw;
+color:blue;
+}
+#total-dose-amount{
+font-size:7vw;
+font-family:"Impact";
+font-weight:bold;
+}
+#total-doses{
+font-size:4vw;
+color:red;
+}
+#dose-text{
+font-size:7vw;
+text-align:left;
+}
+.text-dose{
+top:0px;
+width:50%;
+padding:0;
+margin:0;
+font-size:7vw;
+font-weight:bold;
+color:white;
+background-color:black;
+text-align:right;
+}
+.text-tracker{
+width:50%;
+padding:0;
+margin:0;
+font-size:10vw;
+color:grey;
+background-color:black;
+text-align:left;
+}
+#topParagraph{
+position:relative;
+top:0;
+
+}
+p::first-letter{
+font-weight:bold;
+}

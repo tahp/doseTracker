@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Response Webpage</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <style>
+        body {
+            font-family: "Futura";
+font-size: 40px;
+        }
+    </style>
+
+</head>
+<body >
+  <div id="content">
+    <!-- Content will be loaded here -->
+  </div>
+    <div id="dose-tracker">
+
+<div style="display:flex;  position:absolute ;top:0;left:0;index:0;width:100%;">
+  <div class="text-dose">Dose</div>
+  <div class="text-tracker">Tracker</div>
+</div>
+  
+        
+
+        <p id="topParagraph">You took <span id="last-dose-amount"></span> droppers <span id="time-since-last-dose"></span> ago at <span id="last-dose-time"></p>
+ <p>That adds up to      <span id="total-dose-amount"></span> droppers total, spreaded over <span id="total-doses"></span> doses overall</p>
+        <div id="dose-text">Did you just dose again?</div><p>
+        
+
+ <style>
+  #dose-amount {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  #dose-amount label {
+    flex: 1;
+  }
+</style>
+<div id="amountText">How many droppers?</div><p>
+<div id="dose-amount">
+  <label>
+    <input type="radio" name="dose" value=".5"> .5
+  </label>
+  <label>
+    <input type="radio" name="dose" value="1"> 1
+  </label>
+  <label>
+    <input type="radio" name="dose" value="2"> 2
+  </label>
+  <label>
+    <input type="radio" name="dose" value="3"> 3
+  </label>
+  <label>
+    <input type="radio" name="dose" value="4"> 4
+  </label>
+  <label>
+    <input type="radio" name="dose" value="5"> 5
+  </label>
+</div>
+<p>
+<script src="img/20230528182111.png" onclick"submitDose()"></script>
+        <button onclick="submitDose()" id="confirm">confirm</button>
+        <button onclick="resetDoses()">Reset</button>
+    </div>
+
+    <footer>
+        <!-- Add footer content here -->      <p align=center> <h2>
+        Current Time: <span id="current-time"></span></h2></p>
+    </footer>
+
+    <script>
+        document.getElementById("last-dose-time").innerHTML = new Date().toLocaleTimeString();
+    </script>
+
+  <!-- Include jQuery library -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- Include your script -->
+  <script>
+    $(document).ready(function() {
+      $('nav a').on('click', function(event) {
+        event.preventDefault();
+        var href = $(this).attr('href');
+        $('#content').load(href + ' #content');
+      });
+    });
+  </script>
+</body>
+</html>
